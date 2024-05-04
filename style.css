@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    background-color: antiquewhite;
+    font-family: "Merriweather", serif;
+}
+
+.container{
+    width: 378px;
+    height: 481px;
+    background-color: #fff;
+    padding: 56px;
+    border: 3px solid #25297B;
+    border-radius: 40px;
+}
+
+.header{
+    width: 266px;
+    height: 103px;
+    margin-bottom: 59px
+}
+
+.header h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #1C1E57;
+    margin-bottom: 16px;
+}
+
+.header p{
+    font-size: 14px;
+    font-weight: 800;
+    color: #1C1E57;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.checkbox-container{
+    font-size: 18px;
+    font-weight: 800;
+    color: #1C1E57;
+    margin-bottom: 59px;
+    
+}
+
+.input-container input{
+    height: 31px;
+    width: 31px;
+    margin-right: 9px;
+    
+}
+
+.input-container input:checked{
+    background-color: #fff;
+    color: #1C1E57;
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    /* margin: 0; */
+    
+    font: inherit;
+    color: currentColor;
+    width: 39px;
+    height: 39px;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  /* input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  } */
+  
+  input[type="checkbox"]:disabled {
+    --form-control-color: var(--form-control-disabled);
+  
+    color: var(--form-control-disabled);
+    cursor: not-allowed;
+  }
+  
+.button-container{
+    display: flex;
+    gap: 16px;
+}
+
+.button-container button{
+    width: 125px;
+    height: 54px;
+    padding: 16px 24px;
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.done-btn{
+    background-color: #1C1E57;
+    color: #fff;
+}
+.cancel-btn{
+    background-color: #F5F8FF;
+    color: #1C1E57;
+}
